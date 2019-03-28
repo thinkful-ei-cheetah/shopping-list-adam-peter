@@ -17,14 +17,20 @@ function generateDiv(itemName){
     `;
 }
 
+
 function addItem() {
-    $('#shopping-list-entry').on('submit', function (event) {
+    $('#js-shopping-list-form').on('submit', function (event) {
        event.preventDefault();
-       const addedItem = $('#shopping-list-entry').val().text();
+       const addedItem = $(this).find(
+           'input[name="shopping-list-entry"]').val();
+
        $('u1').append(generateDiv(addedItem));
+       console.log($(this).find('input[name="shopping-list-entry"]').val());
        console.log(generateDiv(addedItem));
+       console.log('test');
     });
 }
 
-$(addItem);
+ $(addItem);
+
 
