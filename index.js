@@ -24,10 +24,8 @@ function addItem() {
        const addedItem = $(this).find(
            'input[name="shopping-list-entry"]').val();
 
-       $('u1').append(generateDiv(addedItem));
-       console.log($(this).find('input[name="shopping-list-entry"]').val());
+       $('.shopping-list').append(generateDiv(addedItem));
        console.log(generateDiv(addedItem));
-       console.log('test');
     });
 }
 
