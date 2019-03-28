@@ -38,3 +38,17 @@ function addItem() {
  }
  
  $(deleteItem);
+
+ function checkItem(){
+  $('.shopping-item-toggle').on('click', function(event) {
+//   $(this).span.attr('.shopping-item','.shopping-item__checked');
+      console.log($(this).parent().eq(1).sibling());
+
+  });
+}
+
+
+$(checkItem);
+
+
+
