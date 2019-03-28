@@ -31,4 +31,10 @@ function addItem() {
 
  $(addItem);
 
-
+ function deleteItem(){
+  $('.shopping-item-delete').on('click', function(event) {
+    $(this).parents().eq(1).remove();
+  });
+ }
+ 
+ $(deleteItem);
