@@ -25,30 +25,31 @@ function addItem() {
            'input[name="shopping-list-entry"]').val();
 
        $('.shopping-list').append(generateDiv(addedItem));
-       console.log(generateDiv(addedItem));
+    // console.log(generateDiv(addedItem));
     });
 }
 
  $(addItem);
 
  function deleteItem(){
-  $('.shopping-item-delete').on('click', function(event) {
-    $(this).parents().eq(1).remove();
+  // $('.shopping-item-delete').on('click', function(event) {
+  //   $(this).parents().eq(1).remove();
+
+  
+  // });
+  $('.shopping-list').on('click', '.shopping-item-delete', function(event){
+    $(this).closest('li').remove();
   });
  }
  
  $(deleteItem);
 
  function checkItem(){
-  $('.shopping-item-toggle').on('click', function(event) {
-//   $(this).span.attr('.shopping-item','.shopping-item__checked');
-      console.log($(this).parent().eq(1).sibling());
-
+  // $('.shopping-item-toggle').on('click', function(event) {
+  //   $(this).parents().eq(1).toggleClass('shopping-item__checked');
+  // });
+  $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+    $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
 }
-
-
 $(checkItem);
-
-
-
