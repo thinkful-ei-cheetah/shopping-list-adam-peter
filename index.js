@@ -52,4 +52,5 @@ function addItem() {
     $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
   });
 }
+
 $(checkItem);
